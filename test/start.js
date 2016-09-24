@@ -5,6 +5,7 @@ var Horseman = require('node-horseman');
 
 	var horseman = new Horseman();
 
+	// pipelines availables
 	var enviromentFunc = function(){};
 	var configFunc = function(){};
 	var stepsFunc = function(){};
@@ -12,12 +13,15 @@ var Horseman = require('node-horseman');
 	/* Getting config */
 	if(!config){
 
+		// default configs values
 		var protocol = "http";
 		var url = "localhost:80";
 		var jsConfig = "config.js", jsEnvironment = "environment.js", jsSteps = "steps.js";
 		var pathType = "./";		
 
 		if(process.argv.length < 5){
+
+			// config from prompt
 
 			var prompt = require('prompt');
 	  		prompt.start();
@@ -44,6 +48,8 @@ var Horseman = require('node-horseman');
 			});
 
 		}else{
+
+			// config from args input
 
 			var iArgs = 2;
 			if(process.argv.length > iArgs){
@@ -77,9 +83,9 @@ var Horseman = require('node-horseman');
 
 		}
 
-
-
-
+	}else{
+		// config from external source
+		start(config);
 	}
 
 	function start(config){
