@@ -1,0 +1,35 @@
+{
+  "name": "phantom-ui",
+  "version": "1.0.0",
+  "description": "A User Interface for JS library PhantomJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danigt91/PhantomUI.git"
+  },
+  "keywords": [
+    "js",
+    "phantom",
+    "phantomjs",
+    "ui",
+    "phantomui",
+    "phantom-ui",
+    "phantomjsui",
+    "phantomjs-ui"
+  ],
+  "author": "Daniel Garcia Tovar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danigt91/PhantomUI/issues"
+  },
+  "homepage": "https://github.com/danigt91/PhantomUI#readme",
+  "dependencies": {
+    "node-horseman": "^3.1.1",
+    "phantom": "^2.1.21",
+    "prompt": "^1.0.0",
+    "rsvp": "^3.3.2"
+  }
+}
