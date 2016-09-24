@@ -93,15 +93,18 @@ var Horseman = require('node-horseman');
 		horseman
 		.log("Starting...")
 		.do(function(done){
-			configFunc(horseman).then(done)
+			// Configuration (Browser, Display, ...)
+			configFunc(horseman).then(done);
 		})
 		.do(function(done){
-			enviromentFunc(horseman).then(done)
+			// Environment (Url, Protocol, ...)
+			enviromentFunc(horseman).then(done);
 		})
 		.do(function(done){
+			// Steps
 			stepsFunc(horseman).then(done);
 		})
-		.close();
+		.close(); // Closing Pipeline...
 
 	}
 
